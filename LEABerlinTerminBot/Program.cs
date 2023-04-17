@@ -5,6 +5,8 @@ using SeleniumExtras.WaitHelpers;
 using System.Diagnostics;
 
 EdgeOptions options = new EdgeOptions();
+
+// no dear LEA, this is not a bot
 options.AddArgument("--disable-blink-features=AutomationControlled");
 options.AddArgument("--disable-gpu");
 bool terminIsFound = true;
@@ -20,8 +22,7 @@ do
     try
     {
 
-        // find termin part
-
+        // finding a termin part
         driver.Navigate().GoToUrl("https://otv.verwalt-berlin.de/ams/TerminBuchen");
         var button = driver.FindElement(By.LinkText("Termin buchen"));
         button.Click();
